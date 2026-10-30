@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: login-system-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        sync: false

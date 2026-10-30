@@ -105,6 +105,8 @@ Create a free Atlas cluster and database user, then allow network access from Re
 
 Create a Render Web Service from the GitHub repository and use the included `render.yaml` blueprint. It configures the `backend` root directory, install/start commands, health check, and production session secret. Provide `MONGO_URI` when prompted. After the first deploy, copy the service URL (for example, `https://your-api.onrender.com`).
 
+The Render service is configured on the free plan; free instances may spin down after inactivity and take a short time to wake up.
+
 ### 3. Deploy the frontend to Vercel
 
 Import the same GitHub repository into Vercel. Keep the project root at the repository root and use:

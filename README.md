@@ -118,7 +118,7 @@ Set the `VITE_API_URL` environment variable to the Render service URL (no traili
 
 ### 4. Connect the services
 
-In the Render service's environment settings, set `FRONTEND_URL` to the production Vercel URL (for example, `https://your-app.vercel.app`) and redeploy. The frontend and API require credentialed requests so login sessions can use secure cookies.
+The included Render blueprint sets `FRONTEND_URL` to the production Vercel URL. If you later add a custom frontend domain, update this value in `render.yaml` and sync the blueprint. The frontend and API require credentialed requests so login sessions can use secure cookies.
 
 Never commit `.env` files or paste secrets into source code. Use `.env.example` and `backend/.env.example` as local templates; enter production values only in the Render and Vercel dashboards.
 
